@@ -1,0 +1,166 @@
+/* =========================
+   Estilização do HEADER
+========================= */
+.header-container {
+    display: flex; /* Exibe os elementos do header (logo, título, menu, botões) em linha */
+    align-items: center; /* Centraliza verticalmente todos os itens do header */
+    justify-content: space-between; /* Deixa o título+menu à esquerda e os botões à direita */
+    padding: 20px 20px; /* Espaçamento interno nas laterais */
+    margin: 10px 0; /* Espaçamento externo acima e abaixo do header */
+}
+
+/* Estilo do título "GlideApp" */
+.titulo {
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-family: Comfortaa; /* Fonte Comfortaa */
+    margin-right: 30px; /* Espaço entre o título e o menu */
+}
+
+/* Estilo da logo (imagem) */
+.logo {
+    width: 40px; /* Define a largura da imagem */
+    margin-right: 10px; /* Espaço entre a imagem e o título */
+}
+
+/* Navegação ocupa o espaço restante entre título e botões */
+.navigation {
+    flex: 1; /* Faz o nav crescer para ocupar o espaço disponível */
+}
+
+/* =========================
+   Estilização do MENU (links)
+========================= */
+.menu {
+    display: flex; /* Deixa os links um ao lado do outro */
+    list-style: none; /* Remove as bolinhas da lista */
+    gap: 20px; /* Espaço entre os itens do menu */
+    padding: 10px 0; /* Espaço interno acima e abaixo do menu */
+    margin: 0; /* Remove margens externas */
+}
+
+/* Estilo dos links do menu */
+.menu li a {
+    font-family: Comfortaa; /* Fonte Comfortaa */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: black; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+/* =========================
+   Estilização dos BOTÕES
+========================= */
+
+/* Botão "Log in" */
+.btn-login {
+    font-family: Comfortaa; /* Fonte Comfortaa */
+    background-color: transparent; /* Fundo transparente (sem cor de fundo) */
+    color: #fbbc05; /* Texto laranja */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px 16px; /* Espaço interno no botão */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para "mãozinha" ao passar por cima */
+}
+
+/* Botão "Get Started" */
+.btn-started {
+    font-family: Comfortaa; /* Fonte Comfortaa */
+    background-color: #fbbc05; /* Fundo laranja */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px 16px; /* Espaço interno no botão */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para "mãozinha" ao passar por cima */
+}
+
+/* =========================
+   Estilização da IMAGEM HERO
+========================= */
+.hero {
+    width: 100%; /* A imagem ocupa 100% da largura da seção */
+    max-width: 1500px; /* Limita o tamanho máximo */
+    height: auto; /* Mantém a proporção correta da imagem */
+    display: block; /* Tira espaçamentos indesejados abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
+    padding: 10px 0; /* Adiciona espaço em cima e embaixo da imagem */
+}
+
+/* =========================
+   Estilização da SEÇÃO DE BANNER
+========================= */
+.bannertext {
+    text-align: center; /* Centraliza o título e o parágrafo */
+    padding: 40px 20px; /* Espaçamento interno para respirar melhor */
+    max-width: 800px; /* Limita a largura para não ficar espalhado */
+    margin: 0 auto; /* Centraliza a seção na página */
+}
+
+.bannertext h1 {
+    font-family: Comfortaa, sans-serif; /* Mantém o padrão da fonte */
+    font-size: 2.5rem; /* Tamanho grande para o título */
+    font-weight: bold;
+    color: #333; /* Cor escura suave */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.bannertext p {
+    font-family: Quicksand, sans-serif; /* Fonte suave para o texto */
+    font-size: 1.2rem; /* Um pouco maior para dar destaque */
+    color: #666; /* Cinza suave para o parágrafo */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* =========================
+   Estilização da LISTA DE FEATURES
+========================= */
+.features {
+    display: flex; /* Exibe os itens da lista em linha */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte quando necessário */
+    justify-content: space-between; /* Distribui os itens igualmente */
+    gap: 20px; /* Espaço entre os itens */
+}
+
+.feature-list {
+    display: flex; /* Flexbox para alinhamento horizontal */
+    flex-wrap: wrap; /* Permite a quebra de linha */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.feature-item {
+    flex: 1 1 45%; /* Flexível: ocupa 45% do espaço disponível, mas pode encolher ou crescer */
+    text-align: center; /* Centraliza o conteúdo dentro de cada item */
+    padding: 10px;
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+}
+
+/* Ícones */
+.feature-item i {
+    font-size: 3rem; /* Tamanho grande para o ícone */
+    color: #fbbc05; /* Cor laranja */
+    margin-bottom: 10px; /* Espaço abaixo do ícone */
+}
+
+.feature-item h2 {
+    font-size: 1.5rem; /* Tamanho maior para o título */
+    font-family: Comfortaa, sans-serif;
+    color: #333; /* Cor escura */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.feature-item p {
+    font-size: 1rem; /* Tamanho de fonte do texto */
+    font-family: Quicksand, sans-serif;
+    color: #666; /* Cor mais suave */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .feature-item {
+        flex: 1 1 100%; /* Faz com que os itens ocupem 100% da largura na tela pequena */
+    }
+}
