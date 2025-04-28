@@ -122,15 +122,6 @@
     gap: 20px; /* Espaço entre os itens */
 }
 
-.feature-list {
-    display: flex; /* Flexbox para alinhamento horizontal */
-    flex-wrap: wrap; /* Permite a quebra de linha */
-    justify-content: flex-start; /* Alinha os itens à esquerda */
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
 .feature-item {
     flex: 1 1 45%; /* Flexível: ocupa 45% do espaço disponível, mas pode encolher ou crescer */
     text-align: center; /* Centraliza o conteúdo dentro de cada item */
@@ -162,5 +153,20 @@
 @media (max-width: 768px) {
     .feature-item {
         flex: 1 1 100%; /* Faz com que os itens ocupem 100% da largura na tela pequena */
+    }
+
+    .header-container {
+        flex-direction: column; /* Faz o header empilhar os itens na versão mobile */
+        text-align: center; /* Centraliza os elementos do header */
+    }
+
+    .menu {
+        flex-direction: column; /* Coloca o menu em uma coluna em telas pequenas */
+        gap: 10px; /* Diminui o espaçamento entre os itens do menu */
+    }
+
+    .botoes {
+        flex-direction: column; /* Coloca os botões em uma coluna */
+        gap: 10px; /* Diminui o espaçamento entre os botões */
     }
 }
