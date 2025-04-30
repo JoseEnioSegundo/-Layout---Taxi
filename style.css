@@ -1,18 +1,11 @@
-/* Define o tamanho base da fonte com ajuste dinâmico de acordo com a largura da tela */
 html {
     font-size: calc(15px + 0.390625vw);
 }
 
-/* Fonte padrão do corpo da página */
 body {
     font-family: "Cabin", sans-serif;
 }
 
-/* =========================
-   CABEÇALHO (HEADER)
-========================= */
-
-/* Container do cabeçalho com espaçamento e alinhamento entre logo, menu e botões */
 .header-container {
     display: flex;
     align-items: center;
@@ -21,7 +14,6 @@ body {
     margin: 10px 0;
 }
 
-/* Estilo do título principal da marca */
 .titulo {
     font-size: 1rem;
     font-weight: bold;
@@ -29,18 +21,15 @@ body {
     margin-right: 30px;
 }
 
-/* Logo da empresa */
 .logo {
     width: 40px;
     margin-right: 10px;
 }
 
-/* Navegação ocupa o espaço disponível */
 .navigation {
     flex: 1;
 }
 
-/* Estilização do menu de navegação como uma lista horizontal */
 .menu {
     display: flex;
     list-style: none;
@@ -49,7 +38,6 @@ body {
     margin: 0;
 }
 
-/* Estilo dos links do menu */
 .menu li a {
     font-family: Comfortaa;
     font-size: 1rem;
@@ -57,7 +45,6 @@ body {
     text-decoration: none;
 }
 
-/* Botão de login transparente com bordas arredondadas */
 .btn-login {
     font-family: Comfortaa;
     background-color: transparent;
@@ -69,7 +56,6 @@ body {
     cursor: pointer;
 }
 
-/* Botão "Get Started" com fundo amarelo */
 .btn-started {
     font-family: Comfortaa;
     background-color: #fbbc05;
@@ -81,34 +67,25 @@ body {
     cursor: pointer;
 }
 
-/* =========================
-   TEXTO INTRODUTÓRIO
-========================= */
-
-/* Estilo da seção de texto de introdução (antes da imagem) */
 .texto-imagem-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     padding: 10px 1px;
-    
 }
 
-/* Estilo do texto à esquerda */
 .texto {
     flex: 1;
     text-align: left;
 }
 
-/* Estilo da imagem à direita */
 .celular-container img {
     max-width: 70%;
     height: auto;
-    width: 70%; /* Controle do tamanho da imagem */
+    width: 70%;
 }
 
-/* Título do bloco de introdução */
 .texto h2 {
     font-size: 1.7rem;
     color: #000000;
@@ -123,16 +100,16 @@ body {
     margin-bottom: 20px;
     font-family: Quicksand, sans-serif;
     text-align: left;
-    margin : 10px;
-}
-.store-buttons {
-    display: flex; /* Aplica Flexbox */
-    justify-content: column; /* Alinha os botões ao centro */
-    gap: 10px; /* Espaçamento entre os botões */
-    margin: 10px; /* Margem ao redor do container */
+    margin: 10px;
 }
 
-/* Estilo individual dos botões */
+.store-buttons {
+    display: flex;
+    justify-content: column;
+    gap: 10px;
+    margin: 10px;
+}
+
 .store-buttons button {
     font-family: Comfortaa, sans-serif;
     background-color: #000000;
@@ -143,11 +120,7 @@ body {
     font-size: 0.9rem;
     cursor: pointer;
 }
-/* =========================
-   HERO IMAGE + TEXTO AO LADO
-========================= */
 
-/* Seção que contém a imagem e o texto "Ready to Ride?" lado a lado */
 .hero-section {
     display: flex;
     flex-wrap: wrap;
@@ -157,19 +130,16 @@ body {
     padding: 40px 20px;
 }
 
-/* Container da imagem da direita */
 .banner {
     flex: 1 1 45%;
     text-align: center;
 }
 
-/* Imagem responsiva */
 .hero {
     max-width: 100%;
     height: auto;
 }
 
-/* Texto ao lado da imagem */
 .bannertext {
     flex: 1 1 45%;
     text-align: left;
@@ -177,7 +147,6 @@ body {
     max-width: 600px;
 }
 
-/* Título "Ready to Ride?" */
 .bannertext h1 {
     font-family: Comfortaa, sans-serif;
     font-size: 2.5rem;
@@ -186,7 +155,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Parágrafo explicativo */
 .bannertext p {
     font-family: Quicksand, sans-serif;
     font-size: 1.2rem;
@@ -194,36 +162,26 @@ body {
     line-height: 1.6;
 }
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
-
-/* Ajustes para telas menores que 768px */
 @media (max-width: 768px) {
-    /* Coloca imagem e texto um abaixo do outro */
     .hero-section {
         flex-direction: column;
         align-items: center;
     }
 
-    /* Centraliza conteúdo da imagem e texto */
     .bannertext,
     .banner {
         flex: 1 1 100%;
         text-align: center;
     }
 
-    /* Remove padding lateral no texto responsivo */
     .bannertext {
         padding: 0;
     }
 
-    /* Centraliza os itens de funcionalidade em telas pequenas */
     .feature-item {
         text-align: center;
     }
 
-    /* Ajusta a largura da imagem do celular */
     .celular-container img {
         width: 70%;
     }
