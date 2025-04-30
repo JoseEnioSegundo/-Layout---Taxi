@@ -1,166 +1,210 @@
+/* Define o tamanho base da fonte com ajuste dinâmico de acordo com a largura da tela */
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+
+/* Fonte padrão do corpo da página */
+body {
+    font-family: "Cabin", sans-serif;
+}
+
 /* =========================
-   Estilização do HEADER
+   CABEÇALHO (HEADER)
 ========================= */
+
+/* Container do cabeçalho com espaçamento e alinhamento entre logo, menu e botões */
 .header-container {
-    display: flex; /* Exibe os elementos do header (logo, título, menu, botões) em linha */
-    align-items: center; /* Centraliza verticalmente todos os itens do header */
-    justify-content: space-between; /* Deixa o título+menu à esquerda e os botões à direita */
-    padding: 20px 20px; /* Espaçamento interno nas laterais */
-    margin: 10px 0; /* Espaçamento externo acima e abaixo do header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 10px 0;
 }
 
-/* Estilo do título "GlideApp" */
+/* Estilo do título principal da marca */
 .titulo {
-    font-size: 1rem; /* Tamanho da fonte */
-    font-weight: bold; /* Deixa o texto em negrito */
-    font-family: Comfortaa; /* Fonte Comfortaa */
-    margin-right: 30px; /* Espaço entre o título e o menu */
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Comfortaa;
+    margin-right: 30px;
 }
 
-/* Estilo da logo (imagem) */
+/* Logo da empresa */
 .logo {
-    width: 40px; /* Define a largura da imagem */
-    margin-right: 10px; /* Espaço entre a imagem e o título */
+    width: 40px;
+    margin-right: 10px;
 }
 
-/* Navegação ocupa o espaço restante entre título e botões */
+/* Navegação ocupa o espaço disponível */
 .navigation {
-    flex: 1; /* Faz o nav crescer para ocupar o espaço disponível */
+    flex: 1;
 }
 
-/* =========================
-   Estilização do MENU (links)
-========================= */
+/* Estilização do menu de navegação como uma lista horizontal */
 .menu {
-    display: flex; /* Deixa os links um ao lado do outro */
-    list-style: none; /* Remove as bolinhas da lista */
-    gap: 20px; /* Espaço entre os itens do menu */
-    padding: 10px 0; /* Espaço interno acima e abaixo do menu */
-    margin: 0; /* Remove margens externas */
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 10px 0;
+    margin: 0;
 }
 
 /* Estilo dos links do menu */
 .menu li a {
-    font-family: Comfortaa; /* Fonte Comfortaa */
-    font-size: 1rem; /* Tamanho da fonte */
-    color: black; /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado dos links */
+    font-family: Comfortaa;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
 }
 
-/* =========================
-   Estilização dos BOTÕES
-========================= */
-
-/* Botão "Log in" */
+/* Botão de login transparente com bordas arredondadas */
 .btn-login {
-    font-family: Comfortaa; /* Fonte Comfortaa */
-    background-color: transparent; /* Fundo transparente (sem cor de fundo) */
-    color: #fbbc05; /* Texto laranja */
-    border: none; /* Sem borda */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 10px 16px; /* Espaço interno no botão */
-    font-size: 0.9rem; /* Tamanho da fonte */
-    cursor: pointer; /* Muda o cursor para "mãozinha" ao passar por cima */
+    font-family: Comfortaa;
+    background-color: transparent;
+    color: #fbbc05;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
 }
 
-/* Botão "Get Started" */
+/* Botão "Get Started" com fundo amarelo */
 .btn-started {
-    font-family: Comfortaa; /* Fonte Comfortaa */
-    background-color: #fbbc05; /* Fundo laranja */
-    color: white; /* Texto branco */
-    border: none; /* Sem borda */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 10px 16px; /* Espaço interno no botão */
-    font-size: 0.9rem; /* Tamanho da fonte */
-    cursor: pointer; /* Muda o cursor para "mãozinha" ao passar por cima */
+    font-family: Comfortaa;
+    background-color: #fbbc05;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
 }
 
 /* =========================
-   Estilização da IMAGEM HERO
+   TEXTO INTRODUTÓRIO
 ========================= */
-.hero {
-    width: 100%; /* A imagem ocupa 100% da largura da seção */
-    max-width: 1500px; /* Limita o tamanho máximo */
-    height: auto; /* Mantém a proporção correta da imagem */
-    display: block; /* Tira espaçamentos indesejados abaixo da imagem */
-    margin: 0 auto; /* Centraliza a imagem */
-    padding: 10px 0; /* Adiciona espaço em cima e embaixo da imagem */
+
+/* Estilo da seção de texto de introdução (antes da imagem) */
+.texto-imagem-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
 }
 
-/* =========================
-   Estilização da SEÇÃO DE BANNER
-========================= */
-.bannertext {
-    text-align: center; /* Centraliza o título e o parágrafo */
-    padding: 40px 20px; /* Espaçamento interno para respirar melhor */
-    max-width: 800px; /* Limita a largura para não ficar espalhado */
-    margin: 0 auto; /* Centraliza a seção na página */
+/* Estilo do texto à esquerda */
+.texto {
+    flex: 1;
+    text-align: left;
 }
 
-.bannertext h1 {
-    font-family: Comfortaa, sans-serif; /* Mantém o padrão da fonte */
-    font-size: 2.5rem; /* Tamanho grande para o título */
-    font-weight: bold;
-    color: #333; /* Cor escura suave */
-    margin-bottom: 20px; /* Espaço abaixo do título */
+/* Estilo da imagem à direita */
+.celular-container img {
+    max-width: 100%;
+    height: auto;
+    width: 50%; /* Controle do tamanho da imagem */
 }
 
-.bannertext p {
-    font-family: Quicksand, sans-serif; /* Fonte suave para o texto */
-    font-size: 1.2rem; /* Um pouco maior para dar destaque */
-    color: #666; /* Cinza suave para o parágrafo */
-    line-height: 1.6; /* Espaçamento entre linhas */
+/* Título do bloco de introdução */
+.texto h2 {
+    font-size: 1.7rem;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
-/* =========================
-   Estilização da LISTA DE FEATURES
-========================= */
-.features {
-    display: flex; /* Exibe os itens da lista em linha */
-    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte quando necessário */
-    justify-content: space-between; /* Distribui os itens igualmente */
-    gap: 20px; /* Espaço entre os itens */
-}
-
-.feature-list {
-    display: flex; /* Flexbox para alinhamento horizontal */
-    flex-wrap: wrap; /* Permite a quebra de linha */
-    justify-content: flex-start; /* Alinha os itens à esquerda */
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.feature-item {
-    flex: 1 1 45%; /* Flexível: ocupa 45% do espaço disponível, mas pode encolher ou crescer */
-    text-align: center; /* Centraliza o conteúdo dentro de cada item */
-    padding: 10px;
-    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
-}
-
-/* Ícones */
-.feature-item i {
-    font-size: 3rem; /* Tamanho grande para o ícone */
-    color: #fbbc05; /* Cor laranja */
-    margin-bottom: 10px; /* Espaço abaixo do ícone */
-}
-
-.feature-item h2 {
-    font-size: 1.5rem; /* Tamanho maior para o título */
-    font-family: Comfortaa, sans-serif;
-    color: #333; /* Cor escura */
-    margin-bottom: 10px; /* Espaço abaixo do título */
-}
-
-.feature-item p {
-    font-size: 1rem; /* Tamanho de fonte do texto */
+.texto p {
+    font-size: 0.7rem;
+    color: #000000;
+    margin-bottom: 20px;
     font-family: Quicksand, sans-serif;
-    color: #666; /* Cor mais suave */
+    text-align: left;
 }
 
-/* Responsividade */
+/* =========================
+   HERO IMAGE + TEXTO AO LADO
+========================= */
+
+/* Seção que contém a imagem e o texto "Ready to Ride?" lado a lado */
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+/* Container da imagem da direita */
+.banner {
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+/* Imagem responsiva */
+.hero {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Texto ao lado da imagem */
+.bannertext {
+    flex: 1 1 45%;
+    text-align: left;
+    padding: 20px;
+    max-width: 600px;
+}
+
+/* Título "Ready to Ride?" */
+.bannertext h1 {
+    font-family: Comfortaa, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Parágrafo explicativo */
+.bannertext p {
+    font-family: Quicksand, sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* Ajustes para telas menores que 768px */
 @media (max-width: 768px) {
+    /* Coloca imagem e texto um abaixo do outro */
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Centraliza conteúdo da imagem e texto */
+    .bannertext,
+    .banner {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    /* Remove padding lateral no texto responsivo */
+    .bannertext {
+        padding: 0;
+    }
+
+    /* Centraliza os itens de funcionalidade em telas pequenas */
     .feature-item {
-        flex: 1 1 100%; /* Faz com que os itens ocupem 100% da largura na tela pequena */
+        text-align: center;
+    }
+
+    /* Ajusta a largura da imagem do celular */
+    .celular-container img {
+        width: 70%;
     }
 }
